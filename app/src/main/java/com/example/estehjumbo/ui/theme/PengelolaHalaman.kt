@@ -32,7 +32,8 @@ import com.example.estehjumbo.R
 enum class PengelolaHalaman {
     Home,
     Rasa,
-    Summary
+    Summary,
+    Formulir
 }
 
 @Composable
