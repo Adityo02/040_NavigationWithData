@@ -1,8 +1,7 @@
-@file:OptIn(
-    ExperimentalMaterial3Api::class,
+@file:OptIn(ExperimentalMaterial3Api::class,
     ExperimentalMaterial3Api::class)
 
-package com.example.estehjumbo
+package com.example.estehjumbo.ui.theme
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -22,10 +21,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.estehjumbo.data.SumberData.flavors
+import com.example.estehjumbo.R
+
 
 enum class PengelolaHalaman {
     Home,
@@ -58,7 +60,7 @@ fun EsJumboAppBar(
 }
 
 @Composable
-fun EsJumboApp(
+fun EsTehJumboApp(
     viewModel: OrdelViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
@@ -94,7 +96,7 @@ fun EsJumboApp(
                 HalamanDua(
                     orderUIState = uiState,
                     onCancelButtonClicked = { cancelOrderAndNavigateToRasa (navController) },
-                )
+                    )
             }
         }
     }

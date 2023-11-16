@@ -1,4 +1,4 @@
-package com.example.estehjumbo
+package com.example.estehjumbo.ui.theme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -26,42 +26,39 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.estehjumbo.ui.theme.EsTehJumboTheme
+import com.example.estehjumbo.R
+
 
 @Composable
 fun HalamanHome (
-    onNextButtonClicked: () -> Unit)
-{
+    onNextButtonClicked: () -> Unit) {
     val image = painterResource(id = R.drawable.logoesteh)
-    Column (modifier = Modifier,
-        verticalArrangement = Arrangement.SpaceBetween) {
-        OutlinedCard(
+    Column(modifier = Modifier, verticalArrangement = Arrangement.SpaceBetween){
+        OutlinedCard (
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.surface,
-            ),
+                ),
             border = BorderStroke(1.dp, Color.Black), modifier = Modifier
                 .fillMaxWidth(0.95f)
                 .padding(vertical = 50.dp)
-                .align(Alignment.CenterHorizontally)
-        ) {
+                .align(Alignment.CenterHorizontally)){
             Column(horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)) {
+                .align(Alignment.CenterHorizontally)) {
                 Image(
                     painter = image,
                     contentDescription = null,
                     contentScale = ContentScale.Crop
                 )
                 Text(
-                    text = "Es Teh",
+                    text = "es Teh",
                     color = Color.DarkGray,
                     fontFamily = FontFamily.Cursive,
                     fontSize = 35.sp,
-                    modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
                 Text(
-                    text = "Gembrunggung",
+                    text = "Racing",
                     color = Color.DarkGray,
                     fontFamily = FontFamily.Cursive,
                     fontStyle = FontStyle.Italic,
@@ -77,11 +74,9 @@ fun HalamanHome (
                 .weight(1f, false),
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
             verticalAlignment = Alignment.Bottom
-        ) {
-            Button(
-                modifier = Modifier.weight(1f),
-                onClick = onNextButtonClicked
-            ) {
+        ){
+            Button(modifier = Modifier.weight(1f),
+                onClick = onNextButtonClicked) {
                 Text(stringResource(R.string.next))
             }
         }

@@ -1,4 +1,4 @@
-package com.example.estehjumbo
+package com.example.estehjumbo.ui.theme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,6 +28,8 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.example.estehjumbo.R
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -44,18 +46,18 @@ fun HalamanSatu(
 
     Column (modifier = modifier, verticalArrangement = Arrangement.SpaceBetween){
         Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))) {
-            pilihanRasa.forEach{ item->
+            pilihanRasa.forEach{ item-> 
                 Row(modifier = Modifier.selectable(selected = rasaYgDipilih == item, onClick = {
                     rasaYgDipilih = item
                     onSelectionChanged(item)
                 }
                 ),
                     verticalAlignment = Alignment.CenterVertically) {
-
-                    RadioButton(selected = rasaYgDipilih == item,
+                    
+                    RadioButton(selected = rasaYgDipilih == item, 
                         onClick = {
-                            rasaYgDipilih = item
-                            onSelectionChanged(item)}
+                            rasaYgDipilih = item 
+                        onSelectionChanged(item)}
                     )
                     Text(item)
                 }
@@ -97,14 +99,14 @@ fun HalamanSatu(
                 OutlinedButton(modifier = Modifier.weight(1f),
                     onClick = onCancelButtonClicked
                 ) {
-                    Text(stringResource(R.string.cancel))
+                   Text(stringResource(R.string.cancel))
                 }
                 Button(
                     modifier = Modifier.weight(1f),
                     enabled = textJmlBeli.isNotEmpty(),
                     onClick = onNextButtonClicked
                 ) {
-                    Text(stringResource(R.string.next))
+                   Text(stringResource(R.string.next))
                 }
             }
         }

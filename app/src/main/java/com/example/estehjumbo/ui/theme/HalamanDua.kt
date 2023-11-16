@@ -1,4 +1,4 @@
-package com.example.estehjumbo
+package com.example.estehjumbo.ui.theme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,8 +17,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import com.example.estehjumbo.R
 import com.example.estehjumbo.data.OrderUIState
 import com.example.estehjumbo.ui.theme.komponen.FormatLabelHarga
+
 
 @Composable
 fun HalamanDua (
@@ -68,13 +70,13 @@ fun HalamanDua (
                     modifier = Modifier.fillMaxWidth(),
                     onClick = { }
                 ) {
-                    Text(stringResource(R.string.send))
+                   Text(stringResource(R.string.send))
                 }
                 OutlinedButton(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onCancelButtonClicked
                 ) {
-                    Text(stringResource(R.string.cancel))
+                   Text(stringResource(R.string.cancel))
                 }
             }
         }

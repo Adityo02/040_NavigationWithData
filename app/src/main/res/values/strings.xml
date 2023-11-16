@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">EsTehJumbo</string>
+    <string name="app_name">EsJumbo</string>
     <string name="back_button">Kembali</string>
     <string name="confirm">Konfirmasi</string>
     <string name="next">Lanjut</string>
     <string name="cancel">Batal</string>
-    <string name="vanilla">Vanila</string>
+    <string name="vanilla">Vanilla</string>
     <string name="lemon">Lemon</string>
     <string name="natural">Natural</string>
     <string name="milk">Milky</string>
-    <string name="lyche">Lychee</string>
-    <string name="order_summary">Ringkasan Order</string>
+    <string name="lyche">Lyche</string>
+    <string name="order_summary">Ringkasa Order</string>
     <string name="send">Send Order to Another App</string>
     <string name="quantity">Jumlah</string>
     <string name="flavor">Rasa</string>
